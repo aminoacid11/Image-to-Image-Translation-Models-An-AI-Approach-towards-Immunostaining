@@ -1,0 +1,7 @@
+Remaining visual evaluation methods:
+
+1. image_imilarity jupyter notebook, 끝에서 두번째 cell에 있는 코드 ㄱㄱ
+
+2. DISTANCE MAP.py (DONE)
+
+3. ZOOM_4.py

@@ -14,9 +14,9 @@ data_gen_args = dict(rotation_range=0.2,
 myGene = trainGenerator(2,'data/membrane/sample_data','image','label',data_gen_args,save_to_dir = None)
 
 model = unet()
-model_checkpoint = ModelCheckpoint('unet_new1.hdf5', monitor='loss',verbose=1, save_best_only=True)
+model_checkpoint = ModelCheckpoint('unet_rgb.hdf5', monitor='loss',verbose=1, save_best_only=True)
 model.fit_generator(myGene,steps_per_epoch=2000,epochs=5,callbacks=[model_checkpoint])
 
 testGene = testGenerator("data/membrane/test_data",flag_multi_class=True)
 results = model.predict_generator(testGene,10,verbose=1)
-saveResult("data/membrane/test_result5",results)
+saveResult("data/membrane/test_result6",results)
